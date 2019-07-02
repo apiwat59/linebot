@@ -12,6 +12,7 @@ $request = file_get_contents('php://input');   // Get request content
 $request_array = json_decode($request, true);   // Decode JSON to Array
 
 $jsonFlex = [
+  {
   "type": "flex",
   "altText": "Flex Message",
   "contents": {
@@ -129,6 +130,7 @@ $jsonFlex = [
       ]
     }
   }
+}
   ];
 
 
