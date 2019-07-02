@@ -12,38 +12,123 @@ $request = file_get_contents('php://input');   // Get request content
 $request_array = json_decode($request, true);   // Decode JSON to Array
 
 $jsonFlex = [
-    {
-  "type": "template",
-  "altText": "Project DNP",
-  "template": {
-    "type": "buttons",
-    "actions": [
-      {
-        "type": "message",
-        "label": "เปิดไฟดวงที่1",
-        "text": "เปิด1"
-      },
-      {
-        "type": "message",
-        "label": "เปิดไฟดวงที่2",
-        "text": "เปิด2"
-      },
-      {
-        "type": "message",
-        "label": "เปิดไฟดวงที่3",
-        "text": "เปิด3"
-      },
-      {
-        "type": "message",
-        "label": "เปิดไฟทั้งหมด",
-        "text": "เปิดทั้งหมด"
+  "type": "flex",
+  "altText": "Flex Message",
+  "contents": {
+    "type": "bubble",
+    "hero": {
+      "type": "image",
+      "url": "https://previews.123rf.com/images/vanatchanan/vanatchanan1610/vanatchanan161000291/65730524-internet-wireless-technology-wireless-icon-wifi-symbol-vector-illustration-.jpg",
+      "size": "full",
+      "aspectRatio": "20:13",
+      "aspectMode": "cover",
+      "action": {
+        "type": "uri",
+        "label": "Action",
+        "uri": "https://linecorp.com"
       }
-    ],
-    "thumbnailImageUrl": "https://yt3.ggpht.com/a-/AAuE7mDIwl8UZy1HlNWiFo0kFOh9HVeubcKKepEDtQ=s900-mo-c-c0xffffffff-rj-k-no",
-    "title": "IOT By DNP (สำหรับเปิด)",
-    "text": "สำหรับเปิด (ต้องการปิดให้พิมพ์ \"ปิดไฟ\")"
+    },
+    "body": {
+      "type": "box",
+      "layout": "vertical",
+      "spacing": "md",
+      "action": {
+        "type": "uri",
+        "label": "Action",
+        "uri": "https://linecorp.com"
+      },
+      "contents": [
+        {
+          "type": "text",
+          "text": "WIFI Helper",
+          "size": "xl",
+          "weight": "bold"
+        },
+        {
+          "type": "text",
+          "text": "จัดทำขึ้นเพื่อเเจ้งปัญหาเเละเเจ้งข้อมูลล่าสุดให้ท่าน",
+          "size": "xxs",
+          "color": "#AAAAAA",
+          "wrap": true
+        }
+      ]
+    },
+    "footer": {
+      "type": "box",
+      "layout": "vertical",
+      "contents": [
+        {
+          "type": "spacer",
+          "size": "xxl"
+        },
+        {
+          "type": "button",
+          "action": {
+            "type": "uri",
+            "label": "รายละเอียด",
+            "uri": "https://linecorp.com"
+          },
+          "color": "#5FB6FF",
+          "style": "primary"
+        },
+        {
+          "type": "separator",
+          "margin": "md",
+          "color": "#FFFFFF"
+        },
+        {
+          "type": "button",
+          "action": {
+            "type": "uri",
+            "label": "ดาวน์โหลด",
+            "uri": "https://linecorp.com"
+          },
+          "color": "#1B78C5",
+          "style": "primary"
+        },
+        {
+          "type": "separator",
+          "margin": "md"
+        },
+        {
+          "type": "button",
+          "action": {
+            "type": "uri",
+            "label": "วิธีใช้งาน",
+            "uri": "https://linecorp.com"
+          },
+          "color": "#5FB6FF",
+          "style": "primary"
+        },
+        {
+          "type": "separator",
+          "margin": "md"
+        },
+        {
+          "type": "button",
+          "action": {
+            "type": "message",
+            "label": "แจ้งปัญหา",
+            "text": "ต้องการเเจ้งปัญหา"
+          },
+          "color": "#1B78C5",
+          "style": "primary"
+        },
+        {
+          "type": "separator",
+          "margin": "md"
+        },
+        {
+          "type": "button",
+          "action": {
+            "type": "uri",
+            "label": "เข้าสู่เว็บไซต์",
+            "uri": "https://linecorp.com"
+          }
+        }
+      ]
+    }
   }
-}
   ];
 
 
